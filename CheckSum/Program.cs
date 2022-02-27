@@ -1,22 +1,13 @@
-﻿using System.CodeDom.Compiler;
+﻿using System;
 using System.Collections.Generic;
-using System.Collections;
-using System.ComponentModel;
-using System.Diagnostics.CodeAnalysis;
-using System.Globalization;
-using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Runtime.Serialization;
-using System.Text.RegularExpressions;
-using System.Text;
-using System;
 
 namespace CheckSum
 {
     class Program
     {
-        private static int[] FillArray(int numCount) { 
+        private static int[] FillArray(int numCount)
+        {
 
             List<int> num = new();
             if (numCount > 1)
@@ -77,7 +68,7 @@ namespace CheckSum
                         second = num[j];
                         break;
                     }
-                    else  if (found > num[j])
+                    else if (found > num[j])
                     {
                         break;
                     }
@@ -113,7 +104,7 @@ namespace CheckSum
                     Console.WriteLine($"first = {nums[0]}");
                     Console.WriteLine($"second = {nums[1]}");
                 }
-                else 
+                else
                 {
                     Console.WriteLine("not fount");
                 }
